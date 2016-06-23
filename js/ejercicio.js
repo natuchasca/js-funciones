@@ -79,41 +79,50 @@ function cuadrado (a, b) {
 }
 */
 
+
 /*
-//#8 NUMERO PRIMO
+//#8 NUMERO PRIMO  /    OK!
 function primo (n) {
-
-}
-
-if ((n/n=parseInt) && (n/1=parseInt)) {
+  var primo=true;
+  for(i=2;i<n;i++) { 
+    if(n%i==0) {
+      primo=false
+    }
+  }
+  if (primo) {
   return("El numero es primo");
- }
- else {
+  }
+  else {
   return("El numero no es primo");
- }
+  }
+}
 */
 
 
-//#9 MULTIPLOS DE UN NUMERO  / NOP algo falta...
+/*
+//#9 MULTIPLOS DE UN NUMERO  /    OK!
 function multiplos (numero) {
-  multiplos = 0;
-  for (i = 1 ; i < 11; i++) {
+  var numero, multiplos;
+  var todos = [];
+  for (var i = 1 ; i < 11; i++) {
     multiplos = (numero)*i; 
-    if(numero==2) {
-    return("El número es primo");
-    }
-    else {
-    return("El número no es primo");
-    }
-  }
+    todos.push(multiplos); 
+  };
+  return(todos)
 };
+*/
 
 
-
-
-
-
-//#10 CANTIDAD DE DIGITOS 
-
-
+/*
+//#10 CANTIDAD DE DIGITOS  /    INCOMPLETO
+function digitos (numeros) {
+  var cadena;
+  cadena = [];
+  cadena.push(numeros);
+  var nums = [];
+  for (var i = 0; i > cadena.length - 1; i++) {
+    nums.split(cadena);
+  };
+  return(cadena.length);
+}
 
