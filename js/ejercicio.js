@@ -32,21 +32,78 @@ function numeropar (n1) {
 }
 */
 
-/*
-//#3 ORDENANDO NUMEROS
-function mayorMenor (n1, n2, n3) {
 
+//#3 ORDENANDO NUMEROS
+var numeros = [];
+ 
+numeros.push(prompt("Introduce el primer número: "));
+numeros.push(prompt("Introduce el segundo número: "));
+numeros.push(prompt("Introduce el tercer número: "));
+ 
+var ordenados = numeros.sort(function (a,b) {
+    return a - b;
+});
+ 
+alert(ordenados);
+
+
+/*
+//#4 MAYUSCULAS O MINUSCULAS  /    OK!
+function letras (texto) {
+  if(texto==texto.toUpperCase()){
+    return 'son mayúsculas';
+  }
+  else if(texto==texto.toLowerCase()){
+    return 'son minúsculas';
+  }
+  else{
+    return 'son mayúsculas y minúsculas';
+  }
 }
 */
 
 
-//#4 MAYUSCULAS O MINUSCULAS
-
-
-
-
-//#5 PALINDROMO
-
+/*
+//#5 PALINDROMO  /    OK!
+function palindromo(texto){
+  
+  // convierto en minusculas
+  texto = texto.toLowerCase();
+  // convierto en array
+  var letrasEspacios = texto.split("");
+  
+  // eliminar espacios
+  
+  var textoSinEspacios = "";
+  
+  for (i in letrasEspacios){
+    if(letrasEspacios[i] != " "){
+      textoSinEspacios += letrasEspacios[i];
+    }
+  }
+  
+  var letras = textoSinEspacios.split("");
+  var letrasReves = textoSinEspacios.split("").reverse();
+  var igual = true;
+  
+  for(i in letras){
+    if (letras[i] != letrasReves[i]){
+      igual = false;
+      break;
+    }
+    else{
+      igual = true;
+    }      
+  }
+  
+  if(igual){
+    return 'SI es palindromo';    
+  }
+  else{
+    return 'NO es palindromo';
+  }
+}
+*/
 
 
 /*
@@ -114,15 +171,27 @@ function multiplos (numero) {
 
 
 /*
-//#10 CANTIDAD DE DIGITOS  /    INCOMPLETO
-function digitos (numeros) {
-  var cadena;
-  cadena = [];
-  cadena.push(numeros);
-  var nums = [];
-  for (var i = 0; i > cadena.length - 1; i++) {
-    nums.split(cadena);
-  };
-  return(cadena.length);
-}
+//#10 CANTIDAD DE DIGITOS  /    INCOMPLETO... los numeros no se pueden contar con .length se muestra udefined, debo convertir a cadena...
+function digitos (numero) {
+  var numero = 0; 
+  var resultado = 0;
 
+  for (var i = 0; i > numero.length; i++) {
+    do {
+      numero = numero/10;
+      resultado++;
+      console.log(numero);
+
+    }while (numero != 0);
+    console.log(resultado)
+  };
+}
+*/
+
+
+
+/*function digitos (numeros) {
+  var cadena = [];
+  cadena.push(numeros.toString());
+  return(cadena);
+}*/
