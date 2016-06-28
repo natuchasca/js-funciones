@@ -33,18 +33,17 @@ function numeropar (n1) {
 */
 
 
-//#3 ORDENANDO NUMEROS
+/*
+//#3 ORDENANDO NUMEROS  /    OK!
+function orden (n1, n2, n3) {
 var numeros = [];
- 
-numeros.push(prompt("Introduce el primer número: "));
-numeros.push(prompt("Introduce el segundo número: "));
-numeros.push(prompt("Introduce el tercer número: "));
- 
+numeros.push(n1,n2,n3);
 var ordenados = numeros.sort(function (a,b) {
     return a - b;
 });
- 
-alert(ordenados);
+return ordenados;
+}
+*/
 
 
 /*
@@ -171,7 +170,7 @@ function multiplos (numero) {
 
 
 /*
-//#10 CANTIDAD DE DIGITOS  /    INCOMPLETO... los numeros no se pueden contar con .length se muestra udefined, debo convertir a cadena...
+//#10 CANTIDAD DE DIGITOS   / No aún
 function digitos (numero) {
   var numero = 0; 
   var resultado = 0;
@@ -189,9 +188,19 @@ function digitos (numero) {
 */
 
 
+/*
+function digitos (numero) {
+  var cadena = ("");
+  cadena = numero;
+  for (var i = 0; i > cadena.length; i++) {
+    do {
+      numero = numero/10;
+      resultado++;
+      console.log(numero);
 
-/*function digitos (numeros) {
-  var cadena = [];
-  cadena.push(numeros.toString());
-  return(cadena);
+    }
+    while (numero != 0);
+    console.log(cadena)
+  };
+  return(cadena.length);
 }*/
